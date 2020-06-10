@@ -1,0 +1,61 @@
+.section5{
+    background-color: rgba($color-black,.02);
+
+}
+.testimonial{
+    padding:9rem 0;
+    position:relative;
+
+    &:before{
+        content: "\201C";
+        font-size: 75rem;
+        position: absolute;
+        top: 0;
+        left:0;
+        line-height: 0.9;
+        color:$color-white;
+    }
+
+    &__slider{
+        display:grid;
+        grid-template-columns:minmax(min-content,85rem);
+        justify-content:center;
+
+        &__img{
+            justify-self:center;
+            margin-bottom:2.5rem;
+            border-radius:50%;
+        }
+    }
+    &__container{
+        text-align:center;
+        padding:4rem 0;
+
+    
+        &__client{
+            padding-top:1.5rem;
+        }
+        &__name{
+            font-size:115%;
+            color:$color-primary-light;
+        }
+        &__work{
+            display:inline-block;
+        }
+    }
+}
+
+.swiper-pagination{
+    text-align:center;
+}
+.swiper-pagination-bullet{
+    height:.8rem;
+    width:.8rem;
+    display:inline-block;
+    background-color:rgba($color-black,.6);
+    margin:.5rem;
+
+    &-active{
+        background-color:$color-primary-light;
+    }
+}

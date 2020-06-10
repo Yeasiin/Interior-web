@@ -1,0 +1,42 @@
+.showcase{
+    padding:14rem 0;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(2, 25vw);
+    grid-gap:2rem;
+
+
+    // Class Of Parents Images
+
+    &__content{
+        grid-column:1 / span 1;
+        grid-row: 1 / span 1;
+    }
+    &__img-1{
+        grid-column: 2 / span 1;
+        grid-row: 1 / -1;
+    }
+    &__img-2{
+        grid-column:3 / span 1;
+        grid-row: 1 / span 1;
+    }
+    &__img-3{
+        grid-column:1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    &__img-4{
+        grid-column:3 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    // Class Of Images
+    &__images{
+        height:100%;
+        width:100%;
+        object-fit:cover;
+        background-color:$color-white;
+        padding:.8rem;
+        box-shadow:0rem 1rem 5rem -3rem rgba(0,0,0,.3);
+    }
+
+}

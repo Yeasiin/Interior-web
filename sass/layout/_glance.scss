@@ -1,0 +1,46 @@
+.glance {
+    margin-top:14rem;
+    padding-bottom:14rem;
+    display:grid;
+    grid-gap:3rem;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    align-content: center;
+
+    &__img{
+        position:relative;
+        left:-4rem;
+        &-1{
+            width:100%;
+            @include glance-utlities;
+        }
+        &-2{
+            position:absolute;
+            right:-3rem;
+            bottom:-4rem;
+            width:40%;
+            @include glance-utlities;
+        }
+    }
+
+    &__content{
+        padding:3rem;
+    }
+
+    &__highlight{
+        list-style:none;
+        display:flex;
+    }
+
+    &__text{
+        flex:0 0 33%;
+        font-size:2.5rem;
+        font-weight:500;
+        margin-top:2rem;
+    }
+
+    &__paragraph{
+        margin-bottom:4rem;
+    }
+
+
+}

@@ -1,0 +1,36 @@
+*,
+*:before,
+*:after {
+    margin:0;
+    padding:0;
+    box-sizing:inherit;
+}
+
+html{
+    box-sizing:border-box;
+    font-size:62.5%;
+    scroll-behavior:smooth;
+}
+body{
+    font-size:1.5rem;
+    line-height:1.7;
+    color:$color-grey-dark;
+    font-family: $font-body;
+
+
+}
+.container {
+    max-width:117rem;
+    width:90%;
+    margin: 0 auto;
+}
+
+::placeholder{
+    font-size:1.4rem;
+    font-weight: 400;
+    color:inherit;
+}
+::selection{
+    background:#333;
+    color:#fff;
+}

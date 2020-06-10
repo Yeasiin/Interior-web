@@ -1,0 +1,45 @@
+.nav-top {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.navigation{
+    padding-top:5rem;
+    display:flex;
+    align-items:center;
+
+
+    &__logo-box{
+        margin-right:auto;
+    }
+
+    &__logo{
+        height:7rem;
+    }
+
+    &__nav{
+    }
+
+    &__list{
+        list-style:none;
+        display:flex;
+    }
+    &__item{
+        
+    }
+
+    &__link:link,
+    &__link:visited{
+        color:inherit;
+        text-decoration:none;
+        padding:3rem;
+        font-weight:500;
+
+    }
+    &__icon{
+        height:8px;
+        width:8px;
+    }
+}

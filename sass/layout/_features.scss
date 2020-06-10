@@ -1,0 +1,23 @@
+.features{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+    margin-top:7rem;
+    margin-bottom:15rem;
+
+    &__card{
+        text-align: center;
+        padding:3rem; 
+        transition:.3s;
+
+        &:hover {
+            box-shadow:0 1rem 3rem -1rem rgba(0, 0, 0, 0.5);
+        }
+    }
+    &__img{
+        margin-bottom:2rem;
+    }
+    &__text{
+        margin-top:1rem;
+    }
+}

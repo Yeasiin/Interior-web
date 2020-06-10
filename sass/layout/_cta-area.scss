@@ -1,0 +1,48 @@
+.cta-area{
+    display:grid;
+    grid-template-columns: minmax(min-content, 70rem);
+    justify-content:center;
+    padding: 9rem 2rem;
+    position:relative;
+     background-image:linear-gradient(to right,$color-primary,$color-primary-light);
+    
+     &:before{
+      content: "subscribe";
+      text-transform: uppercase;
+      position: absolute;
+      display: block;
+      font-size: 20rem;
+      justify-self:center;
+      color: rgba($color-white,.08);
+      font-weight:700;
+      font-family: $font-heading;
+      line-height: .8;
+      bottom:10%;
+     }
+
+     &__form{
+        position:relative;
+        display:flex;
+        justify-content:space-between;
+        padding-top:5rem;
+     }
+     &__input{
+        height:4rem;
+        border:2px solid $color-white;
+        background-color: rgba($color-white,.9);
+        border-radius:10rem;
+        flex:0 0 77%;
+        font-size:inherit;
+        padding-left:2.5rem;
+     }
+
+     &-btn{
+       flex: 0 0 20%;
+       box-shadow: 0 .5rem 5rem -1rem rgba($color-black, .4);
+     }
+    }
+
+
+    .cta-area__form::before {
+     
+   }

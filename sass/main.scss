@@ -1,0 +1,35 @@
+///////////////////////////////////
+//Abstracts
+@import "abstracts/variables";
+@import "abstracts/utlities";
+@import "abstracts/mixins";
+
+////////////////////////////////
+// Verdors
+
+@import "vendors/swiper.scss";
+
+
+
+////////////////////////////////////
+//Base
+@import "base/base";
+@import "base/typography";
+
+
+///////////////////////////////////
+//layout
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/glance";
+@import "layout/features";
+@import "layout/map-area";
+@import "layout/cta-area";
+@import "layout/testimonial";
+@import "layout/showcase";
+@import "layout/footer";
+
+
+/////////////////////////////////////
+//componnent
+@import "components/button";

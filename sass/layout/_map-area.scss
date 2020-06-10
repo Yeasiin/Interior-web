@@ -1,0 +1,15 @@
+.map-area{
+    display:grid;
+    justify-content:center;
+    grid-template-columns: minmax(min-content, 90rem);
+
+
+    &__paragraph{
+        margin-top:4.5rem;
+        margin-bottom:2rem;
+    }
+    
+}
+.section3__img{
+    width:100%;
+}
