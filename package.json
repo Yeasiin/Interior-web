@@ -4,7 +4,6 @@
   "description": "Free Landing Page",
   "main": "index.js",
   "dependencies": {
-    "git": "^0.1.5",
     "node-sass": "^4.14.1"
   },
   "devDependencies": {},
