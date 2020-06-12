@@ -11,20 +11,31 @@
       text-transform: uppercase;
       position: absolute;
       display: block;
-      font-size: 20rem;
+      font-size: 18rem;
       justify-self:center;
       color: rgba($color-white,.08);
       font-weight:700;
       font-family: $font-heading;
       line-height: .8;
       bottom:10%;
+
+      @include respond(mobile-big){
+         font-size:11rem;
+         bottom:20%;
+      }
+
+      @include respond(mobile-small){
+         bottom:25%;
+         color: rgba($color-white,.28);
+         font-size:7.5rem;
+      }
      }
 
      &__form{
         position:relative;
         display:flex;
         justify-content:space-between;
-        padding-top:5rem;
+        padding:5rem 4rem 0;
      }
      &__input{
         height:4rem;
@@ -42,7 +53,3 @@
      }
     }
 
-
-    .cta-area__form::before {
-     
-   }

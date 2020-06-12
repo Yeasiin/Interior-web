@@ -5,28 +5,71 @@
     grid-template-rows:repeat(2, 25vw);
     grid-gap:2rem;
 
+    @include respond(mobile-big){
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows:repeat(3, 40vw);
+    }
+    @include respond(mobile-small){
+        grid-template-rows:repeat(3, 50vw);
+
+    }
+
+
 
     // Class Of Parents Images
 
     &__content{
         grid-column:1 / span 1;
         grid-row: 1 / span 1;
+
+        @include respond(mobile-big){
+            grid-column:1 / span 1;
+             grid-row: 1 / span 1;
+        }
+        
+        @include respond(mobile-small){
+            grid-column:1 / span 2;
+        }
     }
     &__img-1{
         grid-column: 2 / span 1;
         grid-row: 1 / -1;
+
+        @include respond(mobile-big){
+            grid-column:1 / span 1;
+            grid-row: 2 / span 2;
+        }
     }
     &__img-2{
         grid-column:3 / span 1;
         grid-row: 1 / span 1;
+
+        @include respond(mobile-big){
+            grid-column:2 / span 1;
+            grid-row: 1 / span 1;
+        }
+
+        @include respond (mobile-small){
+            display: none;
+        }
     }
     &__img-3{
         grid-column:1 / span 1;
         grid-row: 2 / span 1;
+
+        @include respond(mobile-big){
+            grid-column:2 / span 1;
+            grid-row: 2 / span 1;
+        }
     }
     &__img-4{
         grid-column:3 / span 1;
         grid-row: 2 / span 1;
+
+        @include respond(mobile-big){
+            grid-column:2 / span 1;
+            grid-row: 3 / span 1;
+        }
     }
 
     // Class Of Images

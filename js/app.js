@@ -11,3 +11,19 @@ var swiper = new Swiper('.swiper-container', {
     clickable: true,
   },
 });
+
+
+
+let nav = document.querySelectorAll('.responsive');
+
+nav.forEach(oc =>{
+  oc.addEventListener('click',function(){
+    let menu = document.querySelector('.navigation__list');
+    let nav = document.querySelector('.responsive-icon');
+
+    menu.classList.toggle('active');
+    nav.classList.toggle('active');
+
+
+  })
+})

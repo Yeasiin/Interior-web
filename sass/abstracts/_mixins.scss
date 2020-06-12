@@ -3,3 +3,28 @@
     padding:.5rem;
     box-shadow: .5rem 2rem 3rem -2rem rgba(0, 0, 0, 0.4);
 }
+
+
+@mixin respond($breakpoint){
+
+    @if $breakpoint ==  tab-land {
+        @media only screen and(max-width:75rem) {@content}; //1200px width
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and(max-width:53.15em) {@content}; //850px Width
+    }
+    @if $breakpoint == mobile-big {
+        @media only screen and(max-width:46.8em) {@content}; //750px Width
+    }
+    @if $breakpoint == mobile {
+        @media only screen and (max-width:37.5em) {@content}; //600px width
+    }
+    @if $breakpoint == mobile-small {
+        @media only screen and (max-width:30em) {@content}; // 480px width
+    }
+    
+
+
+
+}

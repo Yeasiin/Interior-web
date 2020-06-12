@@ -1,9 +1,12 @@
 .features{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 3rem;
     margin-top:7rem;
     margin-bottom:15rem;
+    justify-content:center;
+
+    @include respond(mobile){grid-template-columns:40rem;}
 
     &__card{
         text-align: center;

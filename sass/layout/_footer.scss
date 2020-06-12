@@ -5,16 +5,28 @@
 .footer{
     display:flex;
 
+    @include respond(mobile-big){
+        flex-direction:column;
+    }
+
     &__left{
         padding:11rem 0;
         flex:0 0 55%;
+
+        @include respond(mobile-big){
+            flex:0 0 100%;
+        }
     }
 
     &__right{
         padding:11rem 0 10rem;
         flex:0 0 45%;
         position:relative;
-        // z-index: -1;
+
+        @include respond(mobile-big){
+            flex:0 0 100%;
+            margin-left:-7rem;
+        }
 
         &:before{
             position: absolute;
@@ -38,18 +50,34 @@
         margin-right:8rem;
         margin-top:3rem;
         margin-bottom:3rem;
+        justify-content:center;
+
+        @include respond(mobile-big){
+            margin-right:0;
+        }
+
+        @include respond(mobile-small){
+            grid-template-columns:1fr;
+            padding-left:5rem;
+            padding-right:5rem;
+        }
 
         input,textarea{
             border:0;
             border-bottom: 1px solid currentColor;
             padding-bottom:1rem;
+            width: 100%;
         }
 
         &-name{
             grid-column:1 / 2;
          }
         &-email{ 
-            grid-column:2 / 3
+            grid-column:2 / 3;
+            
+            @include respond(mobile-small){
+                grid-column:1 / 2;
+            }
         }
         &-sub{ 
             grid-column:1/-1;

@@ -14,6 +14,13 @@
         left:0;
         line-height: 0.9;
         color:$color-white;
+
+        @include respond(mobile-big){
+            font-size:35rem;
+        }
+        @include respond(mobile-small){
+            display:none;
+        }
     }
 
     &__slider{

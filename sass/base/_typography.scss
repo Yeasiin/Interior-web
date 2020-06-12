@@ -8,6 +8,19 @@
     color:$color-black;
     font-weight: 900;
     padding:3rem;
+
+    @include respond(tab-land){
+        font-size:7rem;
+        line-height: 1;
+    }
+
+    @include respond(mobile-big){
+        font-size:6rem;
+    }
+
+    @include respond(mobile){
+        font-size:5rem;
+    }
 }
 
 .heading-2{

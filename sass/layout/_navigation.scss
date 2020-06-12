@@ -10,7 +10,6 @@
     display:flex;
     align-items:center;
 
-
     &__logo-box{
         margin-right:auto;
     }
@@ -18,28 +17,132 @@
     &__logo{
         height:7rem;
     }
-
-    &__nav{
-    }
-
+    
     &__list{
         list-style:none;
         display:flex;
-    }
-    &__item{
         
+
+        @include respond(mobile){
+            display:none;
+            
+        }
+
+        @include respond(mobile){
+            display:flex;
+            position: absolute;
+            background: #333;
+            padding: 3rem;
+            top: 0;
+            right: -100%;
+            height: 100vh;
+            width: 70%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index:4;
+            // transform: translateX(100%);
+            transition:all .3s;
+            
+        }
+
+        &.active{
+        @include respond(mobile){
+            // transform: translateX(0);
+            right: 0;    
+        }
+        }
     }
+
 
     &__link:link,
     &__link:visited{
+        display:inline-block;
         color:inherit;
         text-decoration:none;
-        padding:3rem;
+        padding:1rem;
+        margin:2rem;
         font-weight:500;
+        transition:all .2s;
+
+
+        @include respond(mobile){
+            padding:.5rem;
+            margin:1rem;
+            color:$color-white;
+            font-size: 2rem;
+        }
+        &:focus{
+            outline:0;
+        }
+
+        &:hover{
+            color:$color-primary-light;
+        }
 
     }
     &__icon{
         height:8px;
         width:8px;
+
+        @include respond(mobile){
+            fill:$color-white;
+        }
     }
+}
+
+.responsive{
+    padding:2rem 0;
+    display:none; 
+    cursor:pointer;
+
+   
+
+    &-icon{
+    background-color:$color-grey-dark;
+    height:3px;
+    width: 4rem;
+    display:inline-block;
+    border-radius:3rem;
+
+    &:before,
+    &:after{
+        width:4rem;
+        height:3px;
+        content:"";
+        display:block;
+        background-color: $color-grey-dark;
+        border-radius:3rem;
+    }
+
+    &:before{
+        margin-top:-1.3rem;
+
+    }
+    &:after{
+        margin-top:2.4rem;
+    }
+
+    &.active{
+        background-color:transparent;
+
+        &:before{
+            margin-top:0;
+            transform:rotate(-135deg);
+        }
+
+        &:after{
+           margin-top:-3px;
+           transform:rotate(135deg);
+        }
+    }
+
+    
+}
+
+@include respond (mobile){
+    display:block;
+    position:relative;
+    z-index:5;
+}
 }

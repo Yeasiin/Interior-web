@@ -10,12 +10,16 @@ html{
     box-sizing:border-box;
     font-size:62.5%;
     scroll-behavior:smooth;
+
+    @include respond(tab-land){font-size:50%;}
+    @include respond(tab-port){font-size:43%;}
 }
 body{
     font-size:1.5rem;
     line-height:1.7;
     color:$color-grey-dark;
     font-family: $font-body;
+    overflow-x:hidden;
 
 
 }

@@ -3,22 +3,31 @@
     padding-bottom:14rem;
     display:grid;
     grid-gap:3rem;
-    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(37rem, 1fr));
     align-content: center;
 
     &__img{
-        position:relative;
-        left:-4rem;
+        transform:translateX(-4rem);
+
+        @include respond(mobile-big){
+            transform:translateX(0);
+        }
+
         &-1{
             width:100%;
             @include glance-utlities;
         }
         &-2{
-            position:absolute;
-            right:-3rem;
-            bottom:-4rem;
+            transform:translate(165%, 0);
             width:40%;
+            margin-top:-17rem;
             @include glance-utlities;
+
+            @include respond(mobile){
+                transform: translate(150%, -17%);
+                
+            }
+            
         }
     }
 
