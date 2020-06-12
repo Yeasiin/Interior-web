@@ -137,8 +137,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.7;
   color: #888888;
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden; }
+  font-family: "Poppins", sans-serif; }
 
 .container {
   max-width: 117rem;
@@ -225,19 +224,19 @@ body {
         display: flex;
         position: absolute;
         background: #333;
-        padding: 3rem;
+        overflow: hidden;
         top: 0;
-        right: -100%;
+        right: 0;
         height: 100vh;
-        width: 70%;
+        width: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         z-index: 4;
-        transition: all .3s; } }
+        transition: width .3s; } }
     @media only screen and (max-width: 37.5em) {
       .navigation__list.active {
-        right: 0; } }
+        width: 70%; } }
   .navigation__link:link, .navigation__link:visited {
     display: inline-block;
     color: inherit;
@@ -264,7 +263,7 @@ body {
         fill: #fff; } }
 
 .responsive {
-  padding: 2rem 0;
+  padding: 1rem 0;
   display: none;
   cursor: pointer; }
   .responsive-icon {
@@ -279,7 +278,8 @@ body {
       content: "";
       display: block;
       background-color: #888888;
-      border-radius: 3rem; }
+      border-radius: 3rem;
+      transition: all .3s; }
     .responsive-icon:before {
       margin-top: -1.3rem; }
     .responsive-icon:after {
