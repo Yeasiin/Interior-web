@@ -154,6 +154,16 @@ body {
   background: #333;
   color: #fff; }
 
+#pre-loader {
+  overflow: hidden;
+  z-index: 99;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Roboto", sans-serif; }
 
@@ -396,7 +406,7 @@ body {
     @media only screen and (max-width: 30em) {
       .cta-area:before {
         bottom: 25%;
-        color: rgba(255, 255, 255, 0.28);
+        color: rgba(255, 255, 255, 0.1);
         font-size: 7.5rem; } }
   .cta-area__form {
     position: relative;

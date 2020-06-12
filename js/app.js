@@ -1,3 +1,4 @@
+////////////////////////////////////////// Slider ////////////////////////////
 var swiper = new Swiper('.swiper-container', {
   spaceBetween: 30,
   centeredSlides: true,
@@ -12,10 +13,8 @@ var swiper = new Swiper('.swiper-container', {
   },
 });
 
-
-
+////////////////////////////////////////// Responsive Nav ////////////////////////////
 let nav = document.querySelectorAll('.responsive');
-
 nav.forEach(oc =>{
   oc.addEventListener('click',function(){
     let menu = document.querySelector('.navigation__list');
@@ -27,3 +26,11 @@ nav.forEach(oc =>{
 
   })
 })
+
+ //////////////////////////// PreLoader Added //////////////////
+window.addEventListener('load', function() {
+  document.getElementById("pre-loader").style.display = "none";
+})
+
+
+
